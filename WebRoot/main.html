@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>mainl.html</title>
+	
+    <meta name="content-type" content="text/html; charset=gb2312">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	
+	<style type="text/css">
+html,body{margin:0;padding:0;}
+#y3 {position:fixed;bottom:0;left:0;width:100px;height:100px;border:1px solid pink;}
+#y4 {position:fixed;bottom:0;right:0;width:100px;height:100px;border:1px solid pimk;}
+</style>
+<!--[if lte IE 6]>
+<style>
+#y3 {position:absolute;}
+#y4 {position:absolute;}
+</style>
+<![endif]-->
+  
+<script type="text/javascript">
+  //以下所有脚本只为IE6写，其他浏览器完全可以删除。
+  function getViewportScrollX() {
+    var scrollX = 0;
+    if (document.documentElement && document.documentElement.scrollLeft) {
+      scrollX = document.documentElement.scrollLeft;
+    }
+    else if (document.body && document.body.scrollLeft) {
+      scrollX = document.body.scrollLeft;
+    }
+    else if (window.pageXOffset) {
+      scrollX = window.pageXOffset;
+    }
+    else if (window.scrollX) {
+      scrollX = window.scrollX;
+    }
+    return scrollX;
+  }
+  
+  function getViewportScrollY() {
+    var scrollY = 0;
+    if (document.documentElement && document.documentElement.scrollTop) {
+      scrollY = document.documentElement.scrollTop;
+    }
+    else if (document.body && document.body.scrollTop) {
+      scrollY = document.body.scrollTop;
+    }
+    else if (window.pageYOffset) {
+      scrollY = window.pageYOffset;
+    }
+    else if (window.scrollY) {
+      scrollY = window.scrollY;
+    }
+    return scrollY;
+  }
+  
+  function getViewportWidth() {
+    var width = 0;
+    if (document.documentElement && document.documentElement.clientWidth) {
+      width = document.documentElement.clientWidth;
+    }
+    else if (document.body && document.body.clientWidth) {
+      width = document.body.clientWidth;
+    }
+    else if (window.innerWidth) {
+      width = window.innerWidth - 18;
+    }
+    return width;
+  }
+  
+  function getViewportHeight() {
+    var height = 0;
+    if (window.innerHeight) {
+      height = window.innerHeight - 18;
+    }
+    else if (document.documentElement && document.documentElement.clientHeight) {
+      height = document.documentElement.clientHeight;
+    }
+    else if (document.body && document.body.clientHeight) {
+      height = document.body.clientHeight;
+    }
+    return height;
+  }
+  
+  if (navigator.userAgent.indexOf("MSIE 6") > -1 && navigator.userAgent.indexOf("MSIE 7") == -1 && navigator.userAgent.indexOf("MSIE 8") == -1) {
+    window.ononload = window.onscroll = window.onresize = function (e) {
+      var t = getViewportScrollY();
+      var l = getViewportScrollX();
+      var w = getViewportWidth();
+      var h = getViewportHeight();
+      
+  
+      document.getElementById("y3").style.left = l + "px";
+      document.getElementById("y3").style.top = t + h - document.getElementById("y2").offsetHeight + "px";
+  
+      document.getElementById("y4").style.left = l + w - document.getElementById("y2").offsetWidth + "px";
+      document.getElementById("y4").style.top = t + h - document.getElementById("y2").offsetHeight + "px";
+    }
+  }
+</script>
+	<style type="text/css">
+	/*去除文字超链接下划线*/
+	a{ text-decoration:none} 
+	/*网站logo容器的样式*/
+#site_title{
+	float:left;			/*向左浮动*/
+	margin-top:30px;
+}
+	
+/*菜单区域的制作*/
+	/*页面菜单*/
+ 
+ #menubar{
+	width:980px;
+	height:60px;
+	
+ }
+ .ddsmoothmenu{
+	float:left;
+ }
+ .ddsmoothmenu ul{
+	z-index:100;					/*置于页面最上端显示*/
+	margin:0;
+	padding:0;
+	list-style-type:none;			/*列表项无列表样式*/
+ }
+
+ .ddsmoothmenu ul li{
+	position:relative;
+	display:inline;
+	float:left;
+ }
+
+ .ddsmoothmenu ul li a{
+	display:block;
+	padding:0 30px;
+	height:40px;
+	line-height:40px;
+	font-size:12px;
+	color:#2f2f2f;
+	text-decoration:none;
+	outline:none;
+	text-align:center;
+ }
+
+ .ddsmoothmenu ul li a.selected,.ddsmoothmenu ul li a:hover{
+	color:#fff;
+	background:#2f2f2f;
+ }
+
+ .ddsmoothmenu ul li ul{
+	position:absolute;
+	left:0;
+	padding:10px 0 0;
+	display:none;
+	visibility:hidden;
+	background:#313131;
+	border-bottom:4px solid #000
+ }
+
+ .ddsmooyhmenu ul li ul li{
+	display:list-item;
+	float:none;
+ }
+
+ .ddsmoothmenu ul li ul li a{
+	font-weight:400;
+	width:130px;
+	height:30px;
+	padding:0 30px;
+	line-height:30px;
+	font-size:11px;
+	text-align:left;
+	background:none;
+	color:#ccc;
+	border-bottom:1px solid #222;
+	border-top:1px solid #444;
+	
+ }
+
+.ddsmoothmenu ul li ul li a.selected,.ddsmoothmenu ul li ul li a:hover{
+	color:#fff;
+	font-weight:700;
+	background:#222;
+ }
+
+ .ddshadow{
+	position:absolute;
+	left:0;
+	top:0;
+	width:0;
+	height:0;
+ }
+
+        h1{ text-align:center; }
+        <!--divtext-align:right; padding-right:-->
+.container{
+	width:960px;
+	height:450px;
+	margin:60px auto;
+}
+.pic{
+	width:250px;
+}
+.container img{
+	padding: 10px 10px 10px;
+	background: white;
+	box-shadow: 5px,5px,3px,rgba(50,50,50,0.4);
+}
+
+.pic1{
+	transform: rotate(-15deg);
+	
+}
+.pic2{
+	transform: rotate(5deg);
+	
+}
+.pic3{
+	transform: rotate(-10deg);
+}
+.pic4{
+	transform: rotate(20deg);
+	
+}
+.pic5{
+	transform: rotate(10deg);
+	
+}
+.pic6{
+	transform: rotate(-15deg);
+	
+}
+.pic7{
+	transform: rotate(15deg);
+	
+}
+.pic8{
+	transform: rotate(-20deg);
+	
+}
+/*页面底部的版权样式*/
+#footer{
+	width:960px;
+	padding:30px 10px;
+	color:#2f2f2f;									/*灰色*/
+	text-align:center;
+	background:url(images/footer.jpg)no-repeat top
+}
+
+#footer a{
+	color:#2f2f2f;									/*超链接文字为白色*/
+}
+    </style>
+	
+  </head>
+  
+  <body bgcolor="pink">
+  
+  <div id="y3" style="height: 127px; width: 229px; " ><a href="denglu.htm"><font color=yellow> 欢迎光临本小店，详情请点击我登录哦</font></a>
+  <div><img src="img/timg.gif"  style="height: 82px; width: 125px; "/></div></div>
+  <div id="y4" style="height: 127px; width: 229px; "><a href="denglu.htm"><font color=yellow> 欢迎光临本小店，详情请点击我登录哦</font></a>
+  <div><img src="img/timg.gif"  style="height: 82px; width: 125px; "/></div></div>
+  	<form name="PetShop" method="POST" action="action1">
+  		<h1>欢迎来到七彩鱼宠物商店</h1>
+      		<div id="site_title"><h3><a href="denglu.htm">很高兴为您服务，若想浏览更多请点击登陆</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3></div>
+			<div class="cleaner"></div>
+		</div>
+       <div id="menubar">
+			<div id="top_nav" class="ddsmoothmenu">
+            <ul>
+             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+					<li><a href="main.html" class="selected">首页</a></li>
+					<li><a href="#">关于</a></li>
+					<li><a href="#">常见问题</a></li>
+					<li><a href="#">联系</a></li>
+				</ul>
+				<br style="clear:left"/>
+			</div>
+            </div>
+  		<br>
+  		<div align="right" margin-left="200px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  		
+  		</div>
+  		
+  		<div class="container" align="center">
+  		<tr>
+		     <td><img src="img/mao1.jpg" class="pic pic1" style="height: 196px; "/></td>
+		     <td><img src="img/mao2.jpg" class="pic pic2" style="height: 196px; "/></td>
+		     <td><img src="img/mao3.jpg" class="pic pic3" style="height: 208px; "/></td>
+		     <td><img src="img/mao4.jpg" class="pic pic4" style="height: 222px; "/></td></tr>
+		    <tr> <td><img src="img/xiaogou1.jpg" class="pic pic5" style="height: 212px; "/></td>
+		     <td><img src="img/xiaogou2.jpg" class="pic pic6" /></td>
+		     <td><img src="img/xiaogou3.jpg" class="pic pic7" /></td>
+		     <td><img src="img/xiaogou4.jpg" class="pic pic8" style="height: 264px; width: 332px"/></td></tr>
+		    <div id="footer">
+		    <p> 
+					<a href="main.html">首页</a>|<a href="#">关于</a>|<a href="#">常见问题</a>|<a href="#">联系</a>
+
+
+<div>
+
+</p>
+Copyright &copy; &nbsp;<a href="#">七彩鱼宠物店</a>&nbsp;&nbsp;2017&nbsp;&nbsp;|&nbsp;&nbsp;热线：400-420-1234&nbsp;&nbsp;ICP 备 12345678 号
+			</div> 
+		</div>
+  	</form>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE web-app PUBLIC
+  '-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN'
+  'http://java.sun.com/j2ee/dtds/web-app_2_3.dtd'>
+
+<web-app>
+	<!-- 查询 -->
+  <servlet>
+    <servlet-name>act2</servlet-name>
+    <servlet-class>mypack.ActionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>act2</servlet-name>
+    <url-pattern>/action2</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>cart</servlet-name>
+    <servlet-class>mypack.ShopServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>cart</servlet-name>
+    <url-pattern>/ShopServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+    <servlet-name>act3</servlet-name>
+    <servlet-class>mypack.ShowPetsDetailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>act3</servlet-name>
+    <url-pattern>/curretDog</url-pattern>
+  </servlet-mapping>
+  
+		<!-- 登陆 -->
+  <servlet>
+    <servlet-name>register1</servlet-name>
+    <servlet-class>mypack.DengLuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>register1</servlet-name>
+    <url-pattern>/dengLu</url-pattern>
+  </servlet-mapping>
+  		<!-- 注册 -->
+  <servlet>
+    <servlet-name>register</servlet-name>
+    <servlet-class>mypack.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>register</servlet-name>
+    <url-pattern>/regisgerServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 超级管理员-->
+  <servlet>
+    <servlet-name>manage</servlet-name>
+    <servlet-class>mypack.ManagerServlet</servlet-class>
+    <init-param> 
+              <param-name>filePath</param-name> 
+	    <param-value>img</param-value> 
+    </init-param> 
+    <init-param> 
+               <param-name>tempFilePath</param-name> 
+               <param-value>temp</param-value> 
+</init-param> 
+    
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>manage</servlet-name>
+    <url-pattern>/manager</url-pattern>
+  </servlet-mapping>
+  
+	<servlet>
+    <servlet-name>manage2</servlet-name>
+    <servlet-class>mypack.ManagerServlet2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>manage2</servlet-name>
+    <url-pattern>/manager2</url-pattern>
+  </servlet-mapping>
+  <!-- 普通管理员 -->
+  <servlet>
+    <servlet-name>manage3</servlet-name>
+    <servlet-class>mypack.ManagerServlet3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>manage3</servlet-name>
+    <url-pattern>/manager3</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>manage1</servlet-name>
+    <servlet-class>mypack.ManagerServlet1</servlet-class>
+     <init-param> 
+              <param-name>filePath</param-name> 
+	    <param-value>img</param-value> 
+    </init-param> 
+    <init-param> 
+               <param-name>tempFilePath</param-name> 
+               <param-value>temp</param-value> 
+</init-param> 
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>manage1</servlet-name>
+    <url-pattern>/manager1</url-pattern>
+  </servlet-mapping>
+  
+
+  
+  
+  
+  
+</web-app>
